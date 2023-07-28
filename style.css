@@ -11,6 +11,25 @@
     transition: all 1s;
 }
 
+.reveal h1,
+.reveal h1 ~ p{
+    color: #52238b;
+    text-shadow:
+            1px 1px 0 #854ec7,
+            1px -1px 0 #854ec7,
+            -1px 1px 0 #854ec7,
+            -1px -1px 0 #854ec7;
+}
+
+.reveal h1 ~ p{
+    color: #7748af;
+    text-shadow:
+            1px 1px 0 #9a73c5,
+            1px -1px 0 #9a73c5,
+            -1px 1px 0 #9a73c5,
+            -1px -1px 0 #9a73c5;
+}
+
 .reveal h3{
     margin-top: 50px;
 }
@@ -26,4 +45,16 @@
 
 .reveal .slide-number{
     right: 50%;
+}
+
+#section1{
+    width: 100px;
+    height: 100vh;
+    background:hsl(222, 25%, 20%);
+    position: absolute;
+    z-index: -1;
+}
+
+.reveal ol{
+    margin-bottom: 50px;
 }
