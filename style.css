@@ -1,0 +1,29 @@
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal p{
+    text-shadow:
+            1px 1px 0 #75726b,
+            1px -1px 0 #75726b,
+            -1px 1px 0 #75726b,
+            -1px -1px 0 #75726b;
+    color: white;
+    transition: all 1s;
+}
+
+.reveal h3{
+    margin-top: 50px;
+}
+
+.reveal p{
+    font-size: 30px;
+}
+
+.reveal a{
+    font-size: 25px;
+    color: white;
+}
+
+.reveal .slide-number{
+    right: 50%;
+}
