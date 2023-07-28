@@ -16,9 +16,12 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-background-gradient="linear-gradient(90deg, #aea4e3, #ffc5ca)">
-					<h1>CANVAS</h1>
-					<p>Stroich Maria, 2023</p>
+				<section data-background-image="https://oir.mobi/uploads/posts/2021-03/1616589201_28-p-fon-dlya-prezentatsii-gorod-32.jpg">
+					<div class="wrapperCanvas">
+						<h1>CANVAS</h1>
+						<p>Stroich Maria, 2023</p>
+					</div>
+
 				</section>
 				<section data-background-gradient="linear-gradient(90deg, #aea4e3, #ffc5ca)">
 					<h2>What is canvas?</h2>
@@ -40,7 +43,7 @@
   						</code>
 					</pre>
 				</section>
-				<section data-background-gradient="linear-gradient(90deg, #aea4e3, #ffc5ca)">
+				<section data-background-image="https://kartinkin.net/uploads/posts/2022-03/1648020807_5-kartinkin-net-p-kartinki-po-geometrii-6.jpg">
 					<h2>Drawing Basic Shapes</h2>
 					<pre>
 						<code data-trim data-line-numbers="1-26">
@@ -87,7 +90,7 @@
   						</code>
 					</pre>
 				</section>
-				<section data-background-gradient="linear-gradient(90deg, #aea4e3, #ffc5ca)">
+				<section data-background-image="https://img.freepik.com/free-vector/gradient-abstract-with-diagonal-lines-background_23-2150536912.jpg?w=996&t=st=1690563594~exp=1690564194~hmac=3290f82c68c7677a15aefdd51a8380830e33aebb5b482f790c42cdacbfd18112">
 					<h2>Gradients and Patterns</h2>
 					<pre>
 						<code data-trim data-line-numbers="2-7">
@@ -111,7 +114,7 @@
   						</code>
 					</pre>
 				</section>
-				<section data-background-gradient="linear-gradient(90deg, #aea4e3, #ffc5ca)">
+				<section data-background-image="https://img.freepik.com/free-vector/abstract-colorful-low-poly-triangle-shapes_361591-3174.jpg?w=1380&t=st=1690563292~exp=1690563892~hmac=337308ec485444d5b0dd0d14ad01aea3160c4b862cbb4555244987323f998542">
 					<h2>Animations with Canvas</h2>
 					<pre>
 						<code data-trim data-line-numbers="1-22">
@@ -140,7 +143,7 @@
 
   						</code>
 					</pre>
-					<canvas id="canvas"  width="400" height="200"></canvas>
+					<canvas id="canvas"  width="400" height="100"></canvas>
 				</section>
 				<section data-background-gradient="linear-gradient(90deg, #aea4e3, #ffc5ca)">
 					<h2>Interactivity with Canvas</h2>
@@ -178,41 +181,6 @@
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			Reveal.initialize({
-				slideNumber: 'c/t',
-				hash: true,
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-
-			const canvas = document.getElementById('canvas');
-			const ctx = canvas.getContext("2d");
-
-			const ballRadius = 20;
-			let x = ballRadius + 5;
-			let dx = 2;
-
-			function drawBall() {
-				ctx.beginPath();
-				ctx.arc(x, canvas.height / 2, ballRadius, 0, Math.PI * 2);
-				ctx.fillStyle = "blue";
-				ctx.fill();
-				ctx.closePath();
-			}
-
-			function animateBall() {
-				ctx.clearRect(0, 0, canvas.width, canvas.height);
-				drawBall();
-				if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
-					dx = -dx;
-				}
-				x += dx;
-				requestAnimationFrame(animateBall);
-			}
-
-			animateBall();
-
-
-		</script>
+		<script src="index.js"></script>
 	</body>
 </html>
