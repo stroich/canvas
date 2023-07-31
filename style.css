@@ -58,3 +58,12 @@
 .reveal ol{
     margin-bottom: 50px;
 }
+
+.container-canvas{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.flex{
+    display: flex;
+}
